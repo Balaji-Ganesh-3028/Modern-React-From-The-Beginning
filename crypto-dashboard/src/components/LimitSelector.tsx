@@ -1,13 +1,13 @@
 interface LimitSelectorProps {
   limit: number;
-  onLimiChange: (limit: number) => void;
+  onLimitChange: (limit: number) => void;
 }
 
-const LimitSelector = ({ limit, onLimiChange }: LimitSelectorProps) => {
+const LimitSelector = ({ limit, onLimitChange }: LimitSelectorProps) => {
   return (
     <div className="controls">
       <label htmlFor="limit">Limit:</label>
-      <select id="limit" value={limit} onChange={(e) => onLimiChange(Number(e.target.value))}>
+      <select id="limit" value={limit} onChange={(e) => onLimitChange(Number(e.target.value))}>
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="25">25</option>
